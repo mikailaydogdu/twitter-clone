@@ -1,25 +1,37 @@
 import logo from './logo.svg';
 import './App.css';
 
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import LoggedView from './components/LoggedView';
+import ExploreView from './components/Explore'
+import NotificationsList from './components/Notifications/NotificationsList';
+import './styles.css';
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+
+      {/* A <Switch> looks through its children <Route>s and
+              renders the first one that matches the current URL. */}
+      <Routes>
+        <Route path="/" element={<LoggedView />} />
+        <Route path="/explore" element={<ExploreView />} />
+        <Route path="/notifications" element={<NotificationsList />} />
+
+      </Routes>
+
+    </Router>
   );
+
 }
 
 export default App;
