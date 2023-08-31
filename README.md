@@ -1,8 +1,8 @@
 # twitter-clone
 
-<img src="img/1.jpeg" height="500"/>
-<img src="img/2.jpeg" height="500"/>
-<img src="img/3.jpeg" height="500"/>
+<img src="img/1.png" height="500"/>
+<img src="img/2.png" height="500"/>
+<img src="img/3.png" height="500"/>
 
 <h1>Getting Started</h1>
 
